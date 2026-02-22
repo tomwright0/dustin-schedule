@@ -2,6 +2,8 @@
 
 Small local web app for creating cleaning events in Google Calendar.
 
+Vibe coded with Codex, I am running this for an easy "locked-down" way to edit a Google Calendar which is then fed into Home Assistant for my Roborock vacuum. Selfhosted via Docker and exposing it via Tailscale Serve to my tailnet. I don't expect this to fit everyones use case, but if you want to try it, setup instructions are below. The UI is kinda mid, but it is working for us.
+
 ## Features
 
 - Title: `Dustin Schedule`

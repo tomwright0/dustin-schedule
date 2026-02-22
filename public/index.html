@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dustin Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <main class="layout">
+      <section class="panel panel-controls">
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">Home Maintenance</p>
+            <h1>Dustin Schedule</h1>
+            <p class="subtitle">Create a cleaning event directly in Google Calendar.</p>
+          </div>
+          <div id="authBlock" class="auth-block">
+            <a id="loginBtn" class="btn btn-primary" href="/auth/google">Sign in with Google</a>
+            <button id="logoutBtn" class="btn btn-secondary hidden" type="button">Log out</button>
+            <span id="authText" class="status">Checking sign-in status...</span>
+          </div>
+        </div>
+
+        <div class="control-grid">
+          <div class="picker-block">
+            <label for="scheduleTime" class="label">Pick date and time</label>
+            <input id="scheduleTime" type="text" placeholder="Select date & time" />
+          </div>
+          <div class="action-row">
+            <button id="vacuumBtn" class="btn btn-ghost" type="button">Vacuum Only</button>
+            <button id="fullCleanBtn" class="btn btn-accent" type="button">Full Clean</button>
+          </div>
+        </div>
+
+        <p id="result" class="result"></p>
+      </section>
+
+      <section class="panel panel-calendar">
+        <div class="calendar-header">
+          <h2>Calendar View</h2>
+          <div class="calendar-tools">
+            <label class="switch-label" for="darkCalendarToggle">
+              <input id="darkCalendarToggle" type="checkbox" />
+              <span>Dark Calendar</span>
+            </label>
+            <p class="subtitle">Live view from Google Calendar.</p>
+          </div>
+        </div>
+        <div class="calendar-wrap">
+          <iframe
+            id="calendarFrame"
+            title="Google Calendar"
+            src="about:blank"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/app.js"></script>
+  </body>
+  </html>
